@@ -1,4 +1,4 @@
-…or create a new repository on the command line
+â€¦or create a new repository on the command line
 
 echo "# hello_text" >> README.md
 git init
@@ -7,24 +7,7 @@ git commit -m "first commit"
 git remote add origin https://github.com/touhidbd9952/hello_text.git
 git push -u origin master
 
-…or push an existing repository from the command line
+â€¦or push an existing repository from the command line
 
 git remote add origin https://github.com/touhidbd9952/hello_text.git
-git push -u origin master
-
-
-
-
-…or create a new repository on the command line
-
-echo "# git_command" >> README.md
-git init
-git add README.md
-git commit -m "first commit"
-git remote add origin https://github.com/touhidbd9952/git_command.git
-git push -u origin master
-
-…or push an existing repository from the command line
-
-git remote add origin https://github.com/touhidbd9952/git_command.git
 git push -u origin master
