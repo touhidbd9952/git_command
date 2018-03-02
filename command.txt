@@ -1,15 +1,63 @@
-…or create a new repository on the command line
+//////Course Calculator ///////
 
-echo "# hello_text" >> README.md
-git init
-git add README.md
-git commit -m "first commit"
-git remote add origin https://github.com/touhidbd9952/hello_text.git
-git push -u origin master
+/////////Program.java ////////////////
 
-…or push an existing repository from the command line
+import java.util.Scanner; 
+public class Program 
+{
+	public static void main(String[] args) 
+	{
+		Training myTrainingObj = new Training();
+		Scanner reader = new Scanner(System.in);  // Reading from System.in
+		
+		System.out.println("Enter Total Course Duration: ");
+		myTrainingObj.set_Total_course_hours(reader.nextInt()); // get input;
+	
+		System.out.println("Enter Per Class Duration: ");
+		myTrainingObj.set_per_class_hours(reader.nextInt()); // get input;
+		//once finished
+		reader.close();
+		int totalcoursehour = myTrainingObj.get_Total_course_hours();
+		int perclasshour = myTrainingObj.get_per_class_hours();
+		int totalclass=0;
+		if((totalcoursehour % perclasshour) >0){
+			totalclass = ((totalcoursehour-(totalcoursehour % perclasshour))/perclasshour)+1;
+		}
+		else{
+			totalclass = totalcoursehour/perclasshour;
+		}
+		
+		System.out.println("Total Class:"+totalclass);
+		
+		
+		
+	}
 
-git remote add origin https://github.com/touhidbd9952/hello_text.git
-git push -u origin master
+}
 
-add 2
+////////class Training  //////////////////////////////////////////////////
+
+public class Training 
+{
+	private int total_course_hours;
+	private int per_class_hours;
+	
+	public void set_Total_course_hours(int hours){
+		this.total_course_hours = hours;
+	}
+	public int get_Total_course_hours() {
+		return total_course_hours;
+	}
+	public void set_per_class_hours(int hours){
+		this.per_class_hours = hours;
+	}
+	public int get_per_class_hours() {
+		return per_class_hours;
+	}
+	
+	//Enum-type
+	public enum daysofweek{saturday,sunday,monday,tuesday,wednesday,thursday,friday}
+	
+
+}
+
